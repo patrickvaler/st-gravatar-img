@@ -4,11 +4,13 @@
 
 # <st-gravatar-img>
 
-A simple web component to display [gravatar] images based on [stencil]
+A simple web component to display [gravatar] images based on [stencil].
+
+Checkout the [Demo] / [Demo with Editor].
 
 ## Install this component
 
-### By cdn (cdn hosted)
+### By cdn
 
 ```html
 <script src="https://unpkg.com/st-gravatar-img@latest/dist/st-gravatar-img.js"></script>
@@ -35,11 +37,11 @@ npm install st-gravatar-img --save
 
 ## Attributes
 
-| Attribute | Type     | Default                            | Description                                                |
-| --------- | -------- | ---------------------------------- | ---------------------------------------------------------- |
-| `hash`    | _string_ | `322b70sg015ith31u69b49cc1c81315f` | MD5 hash of your email (avoid to expose your email)        |
-| `email`   | _string_ | `my@email.com`                     | Gravatar account email (**warning** email will be exposed) |
-| `size`    | _number_ | `120`                              | Size (px) of the image                                     |
+| Attribute | Type     | Default | Description                                                |
+| --------- | -------- | ------- | ---------------------------------------------------------- |
+| `hash`    | _string_ | _none_  | MD5 hash of your email (avoid to expose your email)        |
+| `email`   | _string_ | _none_  | Gravatar account email (**warning** email will be exposed) |
+| `size`    | _number_ | `120`   | Size (px) of the image                                     |
 
 ## CSS Variables
 
@@ -56,7 +58,7 @@ npm install st-gravatar-img --save
 ### Example usage
 
 ```css
-st-gravatar-img {
+:root {
   --gravatar-img-border: 10px solid #a52525;
   --gravatar-img-border-radius: 100%;
   --gravatar-img-background: #a52525;
@@ -86,3 +88,5 @@ gravatarImg.componentOnReady().then(() => {
 [stencil]: https://stenciljs.com/
 [gravatar]: https://gravatar.com/
 [css-variables]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+[demo]: https://st-gravatar-img-vanilla-js.stackblitz.io/
+[demo with editor]: https://stackblitz.com/edit/st-gravatar-img-vanilla-js
