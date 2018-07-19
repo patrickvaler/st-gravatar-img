@@ -1,0 +1,5 @@
+img {
+  border: var(--gravatar-img-border);
+  border-radius: var(--gravatar-img-border-radius);
+  background: var(--gravatar-img-background);
+}

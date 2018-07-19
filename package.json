@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "st-gravatar-img",
+  "version": "0.0.0-semantically-released",
+  "description": "Web Component to display Gravatar Image",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
@@ -13,24 +13,30 @@
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "jest",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
-  "dependencies": {},
+  "dependencies": {
+    "md5": "^2.2.1"
+  },
   "devDependencies": {
     "@stencil/core": "^0.10.0",
     "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "semantic-release": "^15.8.1",
+    "travis-deploy-once": "^5.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/patrickvaler/st-gravatar-img.git"
   },
-  "author": "Ionic Team",
+  "author": "Patrick Valer <hello@patrickvaler.ch>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/patrickvaler/st-gravatar-img"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/patrickvaler/st-gravatar-img",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
@@ -43,5 +49,10 @@
       "json",
       "jsx"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog --save-dev --save-exact"
+    }
   }
 }

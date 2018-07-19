@@ -1,6 +1,6 @@
 exports.config = {
-  namespace: 'mycomponent',
-  outputTargets:[
+  namespace: 'st-gravatar-img',
+  outputTargets: [
     {
       type: 'dist'
     },

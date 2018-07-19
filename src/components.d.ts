@@ -29,33 +29,57 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface StGravatarImg {
+      /**
+       * Exposed Method to create md5 hash
+       */
+      'createHash': (value?: string) => any;
+      /**
+       * Gravatar email (will expose email).
+       */
+      'email': string;
+      /**
+       * MD5 hash of your gravatar email (avoid to expose email)
+       */
+      'hash': string;
+      /**
+       * Image size in pixel
+       */
+      'size': number;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLStGravatarImgElement extends StencilComponents.StGravatarImg, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLStGravatarImgElement: {
+    prototype: HTMLStGravatarImgElement;
+    new (): HTMLStGravatarImgElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'st-gravatar-img': HTMLStGravatarImgElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'st-gravatar-img': HTMLStGravatarImgElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'st-gravatar-img': JSXElements.StGravatarImgAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface StGravatarImgAttributes extends HTMLAttributes {
+      /**
+       * Gravatar email (will expose email).
+       */
+      'email'?: string;
+      /**
+       * MD5 hash of your gravatar email (avoid to expose email)
+       */
+      'hash'?: string;
+      /**
+       * Image size in pixel
+       */
+      'size'?: number;
     }
   }
 }
