@@ -21,9 +21,9 @@
     "md5": "^2.2.1"
   },
   "devDependencies": {
-    "@stencil/core": "^0.10.0",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1",
+    "@stencil/core": "^0.11.3",
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2",
     "semantic-release": "^15.8.1",
     "travis-deploy-once": "^5.0.1"
   },
